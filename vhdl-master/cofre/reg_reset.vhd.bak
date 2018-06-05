@@ -1,0 +1,17 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+ENTITY reg_reset IS
+	PORT ( reset : IN std_LOGIC;
+			bloqueado: IN STD_LOGIC ;
+			R : OUT STD_LOGIC) ;
+			
+END reg_reset ;
+ARCHITECTURE Behavior OF reg_reset IS
+	BEGIN
+		PROCESS ( reset,bloqueado )
+		BEGIN
+			IF reset = '1' and bloqueado = '1'  THEN --Se reset for apertado e o sistema estiver bloqueado
+				
+			end if;
+	END PROCESS ;
+END Behavior ;

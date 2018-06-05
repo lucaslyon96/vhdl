@@ -1,0 +1,892 @@
+Analysis & Synthesis report for relogiodigital
+Wed Nov 22 13:38:44 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "digitalclock:relogio|contador:contador_tempo"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 22 13:38:43 2017           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; relogiodigital                                  ;
+; Top-level Entity Name              ; relogiodigital                                  ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 1,509                                           ;
+;     Total combinational functions  ; 1,509                                           ;
+;     Dedicated logic registers      ; 516                                             ;
+; Total registers                    ; 516                                             ;
+; Total pins                         ; 178                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; relogiodigital     ; relogiodigital     ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; relogiodigital.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/relogiodigital.vhd ;         ;
+; reg1.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/reg1.vhd           ;         ;
+; digitalclock.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/digitalclock.vhd   ;         ;
+; contador.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/contador.vhd       ;         ;
+; cronometro.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/cronometro.vhd     ;         ;
+; mux.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/mux.vhd            ;         ;
+; alarme.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/alarme.vhd         ;         ;
+; regalarme.vhd                    ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/regalarme.vhd      ;         ;
+; regconf.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/regconf.vhd        ;         ;
+; regstrsto.vhd                    ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/regstrsto.vhd      ;         ;
+; regset.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/regset.vhd         ;         ;
+; codificador.vhd                  ; yes             ; Auto-Found VHDL File  ; C:/Users/Lyon/Downloads/relogiodigital (com alarme)-20171122T163144Z-001/relogiodigital (com alarme)/codificador.vhd    ;         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++--------------------------+-----------------------------+
+; Resource                 ; Usage                       ;
++--------------------------+-----------------------------+
+; I/O pins                 ; 178                         ;
+; DSP block 9-bit elements ; 0                           ;
+; Maximum fan-out node     ; digitalclock:relogio|estado ;
+; Maximum fan-out          ; 193                         ;
+; Total fan-out            ; 6529                        ;
+; Average fan-out          ; 2.74                        ;
++--------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; |relogiodigital                      ; 1509 (326)        ; 516 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 178  ; 0            ; |relogiodigital                                                 ; work         ;
+;    |alarme:modo_alarme|              ; 231 (145)         ; 65 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|alarme:modo_alarme                              ; work         ;
+;       |regalarme:reg_alarme_ativado| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|alarme:modo_alarme|regalarme:reg_alarme_ativado ; work         ;
+;       |regconf:reg_conf|             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|alarme:modo_alarme|regconf:reg_conf             ; work         ;
+;       |regset:reg_set|               ; 34 (34)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|alarme:modo_alarme|regset:reg_set               ; work         ;
+;       |regstrsto:reg_str_sto|        ; 50 (50)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|alarme:modo_alarme|regstrsto:reg_str_sto        ; work         ;
+;    |codificador:cod10|               ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod10                               ; work         ;
+;    |codificador:cod11|               ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod11                               ; work         ;
+;    |codificador:cod14|               ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod14                               ; work         ;
+;    |codificador:cod15|               ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod15                               ; work         ;
+;    |codificador:cod16|               ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod16                               ; work         ;
+;    |codificador:cod17|               ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod17                               ; work         ;
+;    |codificador:cod1|                ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod1                                ; work         ;
+;    |codificador:cod2|                ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod2                                ; work         ;
+;    |codificador:cod3|                ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod3                                ; work         ;
+;    |codificador:cod4|                ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod4                                ; work         ;
+;    |codificador:cod5|                ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod5                                ; work         ;
+;    |codificador:cod6|                ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod6                                ; work         ;
+;    |codificador:cod7|                ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod7                                ; work         ;
+;    |codificador:cod8|                ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod8                                ; work         ;
+;    |codificador:cod9|                ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod9                                ; work         ;
+;    |codificador:cod|                 ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|codificador:cod                                 ; work         ;
+;    |cronometro:cron|                 ; 244 (35)          ; 225 (33)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|cronometro:cron                                 ; work         ;
+;       |contador:contador_relogio|    ; 209 (209)         ; 192 (192)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|cronometro:cron|contador:contador_relogio       ; work         ;
+;    |digitalclock:relogio|            ; 344 (12)          ; 193 (1)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|digitalclock:relogio                            ; work         ;
+;       |contador:contador_tempo|      ; 332 (332)         ; 192 (192)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|digitalclock:relogio|contador:contador_tempo    ; work         ;
+;    |mux:modo|                        ; 34 (34)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|mux:modo                                        ; work         ;
+;    |reg1:reg_str_sto|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |relogiodigital|reg1:reg_str_sto                                ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                    ;
++------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                                    ; Free of Timing Hazards ;
++------------------------------------------------------+--------------------------------------------------------+------------------------+
+; led_aviso_alarme$latch                               ; alarme:modo_alarme|regalarme:reg_alarme_ativado|Equal0 ; yes                    ;
+; alarme:modo_alarme|dm_marcado[0]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[1]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[2]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[3]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[4]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[5]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[6]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[7]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[8]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[9]                     ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[10]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[11]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[12]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[13]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[14]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[15]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[16]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[17]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[18]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[19]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[20]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[21]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[22]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[23]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[24]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[25]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[26]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[27]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[28]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[29]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[30]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|dm_marcado[31]                    ; alarme:modo_alarme|dm_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[0]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[1]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[2]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[3]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[4]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[5]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[6]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[7]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[8]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[9]                     ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[10]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[11]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[12]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[13]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[14]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[15]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[16]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[17]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[18]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[19]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[20]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[21]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[22]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[23]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[24]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[25]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[26]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[27]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[28]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[29]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[30]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; alarme:modo_alarme|um_marcado[31]                    ; alarme:modo_alarme|um_marcado[31]                      ; yes                    ;
+; us_relogio[0]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[1]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[2]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[3]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[4]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[5]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; us_relogio[6]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[0]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[1]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[2]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[3]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[4]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[5]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; ds_relogio[6]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[0]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[1]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[2]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[3]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[4]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[5]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; um_relogio[6]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[0]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[1]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[2]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[3]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[4]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[5]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; dm_relogio[6]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[0]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[1]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[2]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[3]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[4]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[5]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; uh_relogio[6]$latch                                  ; us_relogio[6]                                          ; yes                    ;
+; Number of user-specified and inferred latches = 171  ;                                                        ;                        ;
++------------------------------------------------------+--------------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; digitalclock:relogio|cont[0]           ; Merged with cronometro:cron|cont[0]  ;
+; digitalclock:relogio|cont[1]           ; Merged with cronometro:cron|cont[1]  ;
+; digitalclock:relogio|cont[2]           ; Merged with cronometro:cron|cont[2]  ;
+; digitalclock:relogio|cont[3]           ; Merged with cronometro:cron|cont[3]  ;
+; digitalclock:relogio|cont[4]           ; Merged with cronometro:cron|cont[4]  ;
+; digitalclock:relogio|cont[5]           ; Merged with cronometro:cron|cont[5]  ;
+; digitalclock:relogio|cont[6]           ; Merged with cronometro:cron|cont[6]  ;
+; digitalclock:relogio|cont[7]           ; Merged with cronometro:cron|cont[7]  ;
+; digitalclock:relogio|cont[8]           ; Merged with cronometro:cron|cont[8]  ;
+; digitalclock:relogio|cont[9]           ; Merged with cronometro:cron|cont[9]  ;
+; digitalclock:relogio|cont[10]          ; Merged with cronometro:cron|cont[10] ;
+; digitalclock:relogio|cont[11]          ; Merged with cronometro:cron|cont[11] ;
+; digitalclock:relogio|cont[12]          ; Merged with cronometro:cron|cont[12] ;
+; digitalclock:relogio|cont[13]          ; Merged with cronometro:cron|cont[13] ;
+; digitalclock:relogio|cont[14]          ; Merged with cronometro:cron|cont[14] ;
+; digitalclock:relogio|cont[15]          ; Merged with cronometro:cron|cont[15] ;
+; digitalclock:relogio|cont[16]          ; Merged with cronometro:cron|cont[16] ;
+; digitalclock:relogio|cont[17]          ; Merged with cronometro:cron|cont[17] ;
+; digitalclock:relogio|cont[18]          ; Merged with cronometro:cron|cont[18] ;
+; digitalclock:relogio|cont[19]          ; Merged with cronometro:cron|cont[19] ;
+; digitalclock:relogio|cont[20]          ; Merged with cronometro:cron|cont[20] ;
+; digitalclock:relogio|cont[21]          ; Merged with cronometro:cron|cont[21] ;
+; digitalclock:relogio|cont[22]          ; Merged with cronometro:cron|cont[22] ;
+; digitalclock:relogio|cont[23]          ; Merged with cronometro:cron|cont[23] ;
+; digitalclock:relogio|cont[24]          ; Merged with cronometro:cron|cont[24] ;
+; digitalclock:relogio|cont[25]          ; Merged with cronometro:cron|cont[25] ;
+; digitalclock:relogio|cont[26]          ; Merged with cronometro:cron|cont[26] ;
+; digitalclock:relogio|cont[27]          ; Merged with cronometro:cron|cont[27] ;
+; digitalclock:relogio|cont[28]          ; Merged with cronometro:cron|cont[28] ;
+; digitalclock:relogio|cont[29]          ; Merged with cronometro:cron|cont[29] ;
+; digitalclock:relogio|cont[30]          ; Merged with cronometro:cron|cont[30] ;
+; digitalclock:relogio|cont[31]          ; Merged with cronometro:cron|cont[31] ;
+; Total Number of Removed Registers = 32 ;                                      ;
++----------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 516   ;
+; Number of registers using Synchronous Clear  ; 256   ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 226   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; cronometro:cron|cont[0]                ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|digitalclock:relogio|contador:contador_tempo|ds1[31] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|digitalclock:relogio|contador:contador_tempo|um1[31] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|digitalclock:relogio|contador:contador_tempo|dm1[21] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|digitalclock:relogio|contador:contador_tempo|dh1[9]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|us1[21]    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |relogiodigital|digitalclock:relogio|contador:contador_tempo|uh1[3]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|ds1[11]    ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|um1[13]    ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|dm1[16]    ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|dh1[4]     ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |relogiodigital|cronometro:cron|contador:contador_relogio|uh1[29]    ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |relogiodigital|alarme:modo_alarme|regstrsto:reg_str_sto|aux[24]     ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |relogiodigital|us_relogio[3]                                        ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |relogiodigital|uh_relogio[2]                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "digitalclock:relogio|contador:contador_tempo" ;
++-------------+-------+----------+-----------------------------------------+
+; Port        ; Type  ; Severity ; Details                                 ;
++-------------+-------+----------+-----------------------------------------+
+; enable_cron ; Input ; Info     ; Stuck at VCC                            ;
+; reset       ; Input ; Info     ; Stuck at GND                            ;
++-------------+-------+----------+-----------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:11     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 22 13:38:14 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogiodigital -c relogiodigital
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12125): Using design file relogiodigital.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: relogiodigital-relogiodigital
+    Info (12023): Found entity 1: relogiodigital
+Info (12127): Elaborating entity "relogiodigital" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(186): signal "saidaus" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(187): signal "saidads" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(188): signal "saidaum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(189): signal "saidadm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(190): signal "saidauh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(191): signal "saidadh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(193): signal "saidaus1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(194): signal "saidads1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(195): signal "saidaum1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(196): signal "saidadm1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(197): signal "saidauh1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(198): signal "saidadh1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(200): signal "saidaus2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(201): signal "saidads2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(202): signal "saidaum2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(203): signal "saidadm2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(204): signal "saidauh2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(205): signal "saidadh2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(208): signal "alarme_ativado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "dh0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "dh_marcado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "uh0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "uh_marcado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "dm0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "dm_marcado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "um0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(210): signal "um_marcado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at relogiodigital.vhd(217): signal "alarme_ativado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "us_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "ds_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "um_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "dm_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "uh_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "dh_relogio", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at relogiodigital.vhd(183): inferring latch(es) for signal or variable "led_aviso_alarme", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "led_aviso_alarme" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dh_relogio[6]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "uh_relogio[6]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "dm_relogio[6]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "um_relogio[6]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "ds_relogio[6]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[0]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[1]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[2]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[3]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[4]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[5]" at relogiodigital.vhd(183)
+Info (10041): Inferred latch for "us_relogio[6]" at relogiodigital.vhd(183)
+Warning (12125): Using design file reg1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: reg1-reg1
+    Info (12023): Found entity 1: reg1
+Info (12128): Elaborating entity "reg1" for hierarchy "reg1:reg_str_sto"
+Warning (12125): Using design file digitalclock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: digitalclock-digitalclock
+    Info (12023): Found entity 1: digitalclock
+Info (12128): Elaborating entity "digitalclock" for hierarchy "digitalclock:relogio"
+Warning (12125): Using design file contador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: contador-contador
+    Info (12023): Found entity 1: contador
+Info (12128): Elaborating entity "contador" for hierarchy "digitalclock:relogio|contador:contador_tempo"
+Warning (12125): Using design file cronometro.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cronometro-cron
+    Info (12023): Found entity 1: cronometro
+Info (12128): Elaborating entity "cronometro" for hierarchy "cronometro:cron"
+Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus II megafunction library
+Warning (12125): Using design file mux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux-mux
+    Info (12023): Found entity 1: mux
+Info (12128): Elaborating entity "mux" for hierarchy "mux:modo"
+Warning (12125): Using design file alarme.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: alarme-alarme
+    Info (12023): Found entity 1: alarme
+Info (12128): Elaborating entity "alarme" for hierarchy "alarme:modo_alarme"
+Warning (10492): VHDL Process Statement warning at alarme.vhd(75): signal "valor_strsto" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alarme.vhd(77): signal "valor_strsto" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alarme.vhd(79): signal "valor_strsto" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alarme.vhd(81): signal "valor_strsto" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "us_marcado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "ds_marcado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "dh_marcado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "uh_marcado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "dm_marcado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alarme.vhd(69): inferring latch(es) for signal or variable "um_marcado", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "um_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "um_marcado[31]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dm_marcado[31]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "uh_marcado[31]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "dh_marcado[31]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "ds_marcado[31]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[0]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[1]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[2]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[3]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[4]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[5]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[6]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[7]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[8]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[9]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[10]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[11]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[12]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[13]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[14]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[15]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[16]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[17]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[18]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[19]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[20]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[21]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[22]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[23]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[24]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[25]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[26]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[27]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[28]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[29]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[30]" at alarme.vhd(69)
+Info (10041): Inferred latch for "us_marcado[31]" at alarme.vhd(69)
+Warning (12125): Using design file regalarme.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: regalarme-regalarme
+    Info (12023): Found entity 1: regalarme
+Info (12128): Elaborating entity "regalarme" for hierarchy "alarme:modo_alarme|regalarme:reg_alarme_ativado"
+Warning (12125): Using design file regconf.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: regconf-regconf
+    Info (12023): Found entity 1: regconf
+Info (12128): Elaborating entity "regconf" for hierarchy "alarme:modo_alarme|regconf:reg_conf"
+Warning (12125): Using design file regstrsto.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: regstrsto-regstrsto
+    Info (12023): Found entity 1: regstrsto
+Info (12128): Elaborating entity "regstrsto" for hierarchy "alarme:modo_alarme|regstrsto:reg_str_sto"
+Warning (10492): VHDL Process Statement warning at regstrsto.vhd(46): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file regset.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: regset-regset
+    Info (12023): Found entity 1: regset
+Info (12128): Elaborating entity "regset" for hierarchy "alarme:modo_alarme|regset:reg_set"
+Warning (10492): VHDL Process Statement warning at regset.vhd(27): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file codificador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: codificador-codificador
+    Info (12023): Found entity 1: codificador
+Info (12128): Elaborating entity "codificador" for hierarchy "codificador:cod"
+Warning (13012): Latch us_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch us_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch ds_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch um_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dm_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch uh_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Warning (13012): Latch dh_relogio[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mux:modo|valor_atual_mux[1]
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1687 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 172 output pins
+    Info (21061): Implemented 1509 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 145 warnings
+    Info: Peak virtual memory: 538 megabytes
+    Info: Processing ended: Wed Nov 22 13:38:44 2017
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:10
+
+

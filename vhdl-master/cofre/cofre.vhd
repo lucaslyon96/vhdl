@@ -1,0 +1,68 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY cofre IS 
+	PORT(I: in std_logic_vector(7 downto 0);
+			conf: in std_logic; -- chave de seleção dos muxes, modo de segurança(0)/configuração(1)
+			reset: in std_logic;
+			clock: in std_logic;
+			modo: out std_logic; -- LED para sinalizar a operação (segurança/configuração)
+			abrir_bloq: out std_logic; -- LED para sinalizar senha correta (desligado) e incorreta (ligado)
+			saida_mux2: out std_logic_vector (7 downto 0);
+			saida_reg_conf: out std_logic;
+			saida_reg_seg: out std_logic_vector (7  downto 0));
+end cofre;
+architecture cofre of cofre is
+	component reg8conf is 
+	port (D: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+				Resetn, Clock, enable: IN STD_LOGIC;
+				Q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+	end component;
+
+	component mux is
+		port(SEL : in  STD_LOGIC;
+           A   : in  STD_LOGIC_VECTOR (7 downto 0);
+           B   : in  STD_LOGIC_VECTOR (7 downto 0);
+           X   : out STD_LOGIC_VECTOR (7 downto 0));
+	end component;
+	
+	component reg8 is
+		port(	D : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+				Resetn, Clock, bloqueado: IN STD_LOGIC;
+				Q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+	end component;
+	
+	component comp8 is
+		port( A,B: in std_logic_vector(7 downto 0);
+				igual: out std_logic);
+	end component;
+	
+	component reg_reset is
+		port( reset,bloqueado, clock: in std_logic;
+				R: out std_logic);
+	end component;
+	
+	signal out_mux1: std_logic_vector(7 downto 0); 
+	signal out_mux2: std_logic_vector(7 downto 0);
+	signal out_comp_igual: std_logic;
+	signal out_reg_conf: std_logic_vector(7 downto 0);
+	signal out_reg_seg: std_logic_vector(7 downto 0);
+	signal bloqueado: std_logic;
+	--signal out_reg_reset: std_logic;
+
+	begin
+			bloqueado <= not out_comp_igual;
+			--regreset: reg_reset port map (reset,bloqueado,clock,out_reg_reset);
+			reg_conf: reg8conf port map (I,reset,clock,conf,out_reg_conf); -- só carrega quando conf for igual a 1
+			reg_seg: reg8 port map (I,reset,clock,bloqueado,out_reg_seg); -- sempre carrega
+			mux1: mux port map (conf,out_reg_seg,out_reg_conf, out_mux1);
+			--mux2: mux port map (conf,out_mux1,"00000000", out_mux2);
+			comp: comp8 port map(out_mux1,out_reg_conf,out_comp_igual);
+			abrir_bloq <= not out_comp_igual;
+			modo <= conf;
+			
+			-- Saídas de testes
+			saida_mux2 <= out_mux2;
+			--saida_reg_conf <= out_reg_reset;
+			saida_reg_seg <= out_reg_seg;
+end cofre;

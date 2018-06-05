@@ -1,0 +1,165 @@
+|cofre
+I[0] => reg8conf:reg_conf.D[0]
+I[0] => reg8:reg_seg.D[0]
+I[1] => reg8conf:reg_conf.D[1]
+I[1] => reg8:reg_seg.D[1]
+I[2] => reg8conf:reg_conf.D[2]
+I[2] => reg8:reg_seg.D[2]
+I[3] => reg8conf:reg_conf.D[3]
+I[3] => reg8:reg_seg.D[3]
+I[4] => reg8conf:reg_conf.D[4]
+I[4] => reg8:reg_seg.D[4]
+I[5] => reg8conf:reg_conf.D[5]
+I[5] => reg8:reg_seg.D[5]
+I[6] => reg8conf:reg_conf.D[6]
+I[6] => reg8:reg_seg.D[6]
+I[7] => reg8conf:reg_conf.D[7]
+I[7] => reg8:reg_seg.D[7]
+conf => reg8conf:reg_conf.enable
+conf => mux:mux1.SEL
+conf => modo.DATAIN
+reset => reg8conf:reg_conf.Resetn
+reset => reg8:reg_seg.Resetn
+clock => reg8conf:reg_conf.Clock
+clock => reg8:reg_seg.Clock
+modo <= conf.DB_MAX_OUTPUT_PORT_TYPE
+abrir_bloq <= comp8:comp.igual
+saida_mux2[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[1] <= saida_mux2[1].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[2] <= saida_mux2[2].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[3] <= saida_mux2[3].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[4] <= saida_mux2[4].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[5] <= saida_mux2[5].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[6] <= saida_mux2[6].DB_MAX_OUTPUT_PORT_TYPE
+saida_mux2[7] <= saida_mux2[7].DB_MAX_OUTPUT_PORT_TYPE
+saida_reg_conf <= saida_reg_conf.DB_MAX_OUTPUT_PORT_TYPE
+saida_reg_seg[0] <= reg8:reg_seg.Q[0]
+saida_reg_seg[1] <= reg8:reg_seg.Q[1]
+saida_reg_seg[2] <= reg8:reg_seg.Q[2]
+saida_reg_seg[3] <= reg8:reg_seg.Q[3]
+saida_reg_seg[4] <= reg8:reg_seg.Q[4]
+saida_reg_seg[5] <= reg8:reg_seg.Q[5]
+saida_reg_seg[6] <= reg8:reg_seg.Q[6]
+saida_reg_seg[7] <= reg8:reg_seg.Q[7]
+
+
+|cofre|reg8conf:reg_conf
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Resetn => ~NO_FANOUT~
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+enable => Q[0]~reg0.ENA
+enable => Q[7]~reg0.ENA
+enable => Q[6]~reg0.ENA
+enable => Q[5]~reg0.ENA
+enable => Q[4]~reg0.ENA
+enable => Q[3]~reg0.ENA
+enable => Q[2]~reg0.ENA
+enable => Q[1]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|reg8:reg_seg
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Resetn => process_0.IN0
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+bloqueado => process_0.IN1
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|mux:mux1
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+SEL => X.OUTPUTSELECT
+A[0] => X.DATAB
+A[1] => X.DATAB
+A[2] => X.DATAB
+A[3] => X.DATAB
+A[4] => X.DATAB
+A[5] => X.DATAB
+A[6] => X.DATAB
+A[7] => X.DATAB
+B[0] => X.DATAA
+B[1] => X.DATAA
+B[2] => X.DATAA
+B[3] => X.DATAA
+B[4] => X.DATAA
+B[5] => X.DATAA
+B[6] => X.DATAA
+B[7] => X.DATAA
+X[0] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[4] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[5] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[6] <= X.DB_MAX_OUTPUT_PORT_TYPE
+X[7] <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|comp8:comp
+A[0] => Equal0.IN7
+A[1] => Equal0.IN6
+A[2] => Equal0.IN5
+A[3] => Equal0.IN4
+A[4] => Equal0.IN3
+A[5] => Equal0.IN2
+A[6] => Equal0.IN1
+A[7] => Equal0.IN0
+B[0] => Equal0.IN15
+B[1] => Equal0.IN14
+B[2] => Equal0.IN13
+B[3] => Equal0.IN12
+B[4] => Equal0.IN11
+B[5] => Equal0.IN10
+B[6] => Equal0.IN9
+B[7] => Equal0.IN8
+igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

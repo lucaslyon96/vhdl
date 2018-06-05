@@ -1,0 +1,365 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'mux:modo|valor_atual_mux[0]'
+Slack : -6.760
+TNS   : -228.514
+
+Type  : Slow 1200mV 85C Model Setup 'digitalclock:relogio|estado'
+Slack : -5.437
+TNS   : -739.165
+
+Type  : Slow 1200mV 85C Model Setup 'cronometro:cron|estado'
+Slack : -4.488
+TNS   : -748.866
+
+Type  : Slow 1200mV 85C Model Setup 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -3.999
+TNS   : -10.919
+
+Type  : Slow 1200mV 85C Model Setup 'str_sto'
+Slack : -3.914
+TNS   : -125.136
+
+Type  : Slow 1200mV 85C Model Setup 'set'
+Slack : -3.296
+TNS   : -69.628
+
+Type  : Slow 1200mV 85C Model Setup 'mode'
+Slack : -2.633
+TNS   : -49.876
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.459
+TNS   : -53.469
+
+Type  : Slow 1200mV 85C Model Setup 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -1.667
+TNS   : -78.172
+
+Type  : Slow 1200mV 85C Model Setup 'config'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'set'
+Slack : -1.804
+TNS   : -33.822
+
+Type  : Slow 1200mV 85C Model Hold 'mode'
+Slack : -1.769
+TNS   : -27.671
+
+Type  : Slow 1200mV 85C Model Hold 'str_sto'
+Slack : -1.173
+TNS   : -37.440
+
+Type  : Slow 1200mV 85C Model Hold 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -0.973
+TNS   : -44.265
+
+Type  : Slow 1200mV 85C Model Hold 'mux:modo|valor_atual_mux[0]'
+Slack : -0.858
+TNS   : -14.925
+
+Type  : Slow 1200mV 85C Model Hold 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -0.438
+TNS   : -3.308
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.114
+TNS   : -0.189
+
+Type  : Slow 1200mV 85C Model Hold 'config'
+Slack : -0.040
+TNS   : -0.040
+
+Type  : Slow 1200mV 85C Model Hold 'digitalclock:relogio|estado'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cronometro:cron|estado'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -37.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'str_sto'
+Slack : -3.000
+TNS   : -36.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mode'
+Slack : -3.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'set'
+Slack : -3.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'config'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cronometro:cron|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'digitalclock:relogio|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mux:modo|valor_atual_mux[0]'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'mux:modo|valor_atual_mux[0]'
+Slack : -5.975
+TNS   : -203.061
+
+Type  : Slow 1200mV 0C Model Setup 'digitalclock:relogio|estado'
+Slack : -4.765
+TNS   : -645.550
+
+Type  : Slow 1200mV 0C Model Setup 'cronometro:cron|estado'
+Slack : -3.923
+TNS   : -656.980
+
+Type  : Slow 1200mV 0C Model Setup 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -3.470
+TNS   : -7.513
+
+Type  : Slow 1200mV 0C Model Setup 'str_sto'
+Slack : -3.463
+TNS   : -110.720
+
+Type  : Slow 1200mV 0C Model Setup 'set'
+Slack : -2.891
+TNS   : -57.583
+
+Type  : Slow 1200mV 0C Model Setup 'mode'
+Slack : -2.278
+TNS   : -39.818
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.026
+TNS   : -43.149
+
+Type  : Slow 1200mV 0C Model Setup 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -1.502
+TNS   : -70.084
+
+Type  : Slow 1200mV 0C Model Setup 'config'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'set'
+Slack : -1.649
+TNS   : -32.227
+
+Type  : Slow 1200mV 0C Model Hold 'mode'
+Slack : -1.641
+TNS   : -27.709
+
+Type  : Slow 1200mV 0C Model Hold 'str_sto'
+Slack : -1.070
+TNS   : -34.128
+
+Type  : Slow 1200mV 0C Model Hold 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -0.735
+TNS   : -26.383
+
+Type  : Slow 1200mV 0C Model Hold 'mux:modo|valor_atual_mux[0]'
+Slack : -0.643
+TNS   : -9.102
+
+Type  : Slow 1200mV 0C Model Hold 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -0.262
+TNS   : -0.747
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.120
+TNS   : -0.196
+
+Type  : Slow 1200mV 0C Model Hold 'config'
+Slack : -0.066
+TNS   : -0.066
+
+Type  : Slow 1200mV 0C Model Hold 'digitalclock:relogio|estado'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'cronometro:cron|estado'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -37.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'str_sto'
+Slack : -3.000
+TNS   : -36.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mode'
+Slack : -3.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'set'
+Slack : -3.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'config'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cronometro:cron|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'digitalclock:relogio|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mux:modo|valor_atual_mux[0]'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mux:modo|valor_atual_mux[0]'
+Slack : -3.620
+TNS   : -115.301
+
+Type  : Fast 1200mV 0C Model Setup 'digitalclock:relogio|estado'
+Slack : -2.622
+TNS   : -342.980
+
+Type  : Fast 1200mV 0C Model Setup 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -2.110
+TNS   : -2.181
+
+Type  : Fast 1200mV 0C Model Setup 'cronometro:cron|estado'
+Slack : -2.039
+TNS   : -334.640
+
+Type  : Fast 1200mV 0C Model Setup 'str_sto'
+Slack : -1.706
+TNS   : -54.512
+
+Type  : Fast 1200mV 0C Model Setup 'set'
+Slack : -1.460
+TNS   : -26.459
+
+Type  : Fast 1200mV 0C Model Setup 'mode'
+Slack : -1.035
+TNS   : -14.276
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.984
+TNS   : -15.735
+
+Type  : Fast 1200mV 0C Model Setup 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -0.720
+TNS   : -19.525
+
+Type  : Fast 1200mV 0C Model Setup 'config'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'set'
+Slack : -1.133
+TNS   : -22.206
+
+Type  : Fast 1200mV 0C Model Hold 'mode'
+Slack : -1.018
+TNS   : -15.813
+
+Type  : Fast 1200mV 0C Model Hold 'str_sto'
+Slack : -0.818
+TNS   : -26.112
+
+Type  : Fast 1200mV 0C Model Hold 'mux:modo|valor_atual_mux[0]'
+Slack : -0.707
+TNS   : -17.370
+
+Type  : Fast 1200mV 0C Model Hold 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : -0.495
+TNS   : -28.596
+
+Type  : Fast 1200mV 0C Model Hold 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : -0.196
+TNS   : -0.843
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.152
+TNS   : -0.299
+
+Type  : Fast 1200mV 0C Model Hold 'config'
+Slack : -0.102
+TNS   : -0.102
+
+Type  : Fast 1200mV 0C Model Hold 'digitalclock:relogio|estado'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'cronometro:cron|estado'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mode'
+Slack : -3.000
+TNS   : -39.766
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -37.579
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'str_sto'
+Slack : -3.000
+TNS   : -36.428
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'set'
+Slack : -3.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'config'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cronometro:cron|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'digitalclock:relogio|estado'
+Slack : -1.000
+TNS   : -192.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'alarme:modo_alarme|regset:reg_set|aux[0]'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'alarme:modo_alarme|regconf:reg_conf|valor_conf'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mux:modo|valor_atual_mux[0]'
+Slack : 0.437
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,561 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V or 3.0V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 3:		2.5V
+ --					Bank 4:		2.5V
+ --					Bank 5:		2.5V
+ --					Bank 6:		2.5V
+ --					Bank 7:		2.5V
+ --					Bank 8:	2.5V
+ --					Bank 9:	2.5V
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --           	    either individually through a 10k Ohm resistor to GND or tie all pins
+ --           	    together and connect through a single 10k Ohm resistor to GND.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_GND*      : Unused GXB Receiver or dedicated reference clock pin. This pin
+ --                 must be connected to GXB_GND through a 10k Ohm resistor.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+CHIP  "relogiodigital"  ASSIGNED TO AN: EP4CGX30CF23C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+um_alarme_teste[10]          : A1        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[12]          : A2        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[24]         : A3        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[17]          : A4        : output : 2.5 V             :         : 8         : N              
+dm_alarme_teste[23]          : A5        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[1]           : A6        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[15]         : A7        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[28]          : A8        : output : 2.5 V             :         : 8         : N              
+GND+                         : A9        :        :                   :         : 7         :                
+um_relogio_teste[0]          : A10       : output : 2.5 V             :         : 7         : N              
+um_relogio_teste[4]          : A11       : output : 2.5 V             :         : 7         : N              
+um_relogio_teste[14]         : A12       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[15]         : A13       : output : 2.5 V             :         : 7         : N              
+ds_relogio[3]                : A14       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[21]         : A15       : output : 2.5 V             :         : 7         : N              
+um_relogio_teste[17]         : A16       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[27]         : A17       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
+um_relogio_teste[30]         : A20       : output : 2.5 V             :         : 6         : N              
+ds_relogio[0]                : A21       : output : 2.5 V             :         : 6         : N              
+um_relogio_teste[22]         : A22       : output : 2.5 V             :         : 6         : N              
+GND                          : AA1       : gnd    :                   :         :           :                
+GND                          : AA2       : gnd    :                   :         :           :                
+NC                           : AA3       :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 3         :                
+GND                          : AA5       : gnd    :                   :         :           :                
+dm_alarme_teste[10]          : AA6       : output : 2.5 V             :         : 3         : N              
+uh_relogio[1]                : AA7       : output : 2.5 V             :         : 3         : N              
+GND                          : AA8       : gnd    :                   :         :           :                
+um_relogio_teste[23]         : AA9       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[19]          : AA10      : output : 2.5 V             :         : 3         : N              
+GND                          : AA11      : gnd    :                   :         :           :                
+set                          : AA12      : input  : 2.5 V             :         : 4         : N              
+dm_alarme_teste[0]           : AA13      : output : 2.5 V             :         : 4         : N              
+GND                          : AA14      : gnd    :                   :         :           :                
+dm_alarme_teste[5]           : AA15      : output : 2.5 V             :         : 4         : N              
+dm_relogio[5]                : AA16      : output : 2.5 V             :         : 4         : N              
+GND                          : AA17      : gnd    :                   :         :           :                
+dm_alarme_teste[30]          : AA18      : output : 2.5 V             :         : 4         : N              
+uh_relogio[3]                : AA19      : output : 2.5 V             :         : 4         : N              
+dm_relogio[2]                : AA20      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 4         :                
+RREF                         : AB1       :        :                   :         :           :                
+GND                          : AB2       : gnd    :                   :         :           :                
+~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : AB3       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[18]          : AB4       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[9]           : AB5       : output : 2.5 V             :         : 3         : N              
+dm_alarme_teste[21]          : AB6       : output : 2.5 V             :         : 3         : N              
+dh_relogio[1]                : AB7       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[23]          : AB8       : output : 2.5 V             :         : 3         : N              
+um_relogio_teste[20]         : AB9       : output : 2.5 V             :         : 3         : N              
+um_relogio_teste[13]         : AB10      : output : 2.5 V             :         : 3         : N              
+um_relogio_teste[18]         : AB11      : output : 2.5 V             :         : 3         : N              
+config                       : AB12      : input  : 2.5 V             :         : 4         : N              
+um_relogio_teste[3]          : AB13      : output : 2.5 V             :         : 4         : N              
+us_relogio[4]                : AB14      : output : 2.5 V             :         : 4         : N              
+dm_alarme_teste[16]          : AB15      : output : 2.5 V             :         : 4         : N              
+us_relogio_teste[22]         : AB16      : output : 2.5 V             :         : 4         : N              
+reset                        : AB17      : input  : 2.5 V             :         : 4         : N              
+uh_relogio[5]                : AB18      : output : 2.5 V             :         : 4         : N              
+dh_relogio[4]                : AB19      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :         : 4         :                
+um_relogio_teste[27]         : B1        : output : 2.5 V             :         : 8         : N              
+GND                          : B2        : gnd    :                   :         :           :                
+um_relogio_teste[25]         : B3        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[21]          : B4        : output : 2.5 V             :         : 8         : N              
+GND                          : B5        : gnd    :                   :         :           :                
+um_relogio_teste[26]         : B6        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[13]          : B7        : output : 2.5 V             :         : 8         : N              
+GND                          : B8        : gnd    :                   :         :           :                
+GND+                         : B9        :        :                   :         : 7         :                
+dm_alarme_teste[17]          : B10       : output : 2.5 V             :         : 7         : N              
+GND                          : B11       : gnd    :                   :         :           :                
+us_relogio_teste[26]         : B12       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[30]         : B13       : output : 2.5 V             :         : 7         : N              
+GND                          : B14       : gnd    :                   :         :           :                
+um_relogio_teste[19]         : B15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7         :                
+GND                          : B17       : gnd    :                   :         :           :                
+mode                         : B18       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 6         :                
+um_alarme_teste[4]           : B20       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
+us_relogio[5]                : B22       : output : 2.5 V             :         : 6         : N              
+dm_alarme_teste[9]           : C1        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[9]          : C2        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
+um_alarme_teste[31]          : C4        : output : 2.5 V             :         : 8         : N              
+dm_alarme_teste[6]           : C5        : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[27]          : C6        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[6]          : C7        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[29]         : C8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 8         :                
+um_relogio[1]                : C10       : output : 2.5 V             :         : 7         : N              
+uh_relogio[0]                : C11       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[12]         : C12       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[5]          : C13       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[23]         : C14       : output : 2.5 V             :         : 7         : N              
+um_alarme_teste[16]          : C15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 6         :                
+GND                          : C21       : gnd    :                   :         :           :                
+us_relogio_teste[4]          : C22       : output : 2.5 V             :         : 6         : N              
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D1        : input  : 2.5 V             :         : 9         : N              
+nCE                          : D2        :        :                   :         : 9         :                
+~ALTERA_DCLK~                : D3        : output : 2.5 V             :         : 9         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+um_alarme_teste[6]           : D7        : output : 2.5 V             :         : 8         : N              
+um_relogio_teste[10]         : D8        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
+dm_alarme_teste[20]          : D11       : output : 2.5 V             :         : 8         : N              
+um_alarme_teste[29]          : D12       : output : 2.5 V             :         : 8         : N              
+dm_relogio[6]                : D13       : output : 2.5 V             :         : 7         : N              
+ds_relogio[4]                : D14       : output : 2.5 V             :         : 7         : N              
+um_alarme_teste[5]           : D15       : output : 2.5 V             :         : 7         : N              
+dm_alarme_teste[7]           : D16       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
+GND                          : D18       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 6         :                
+um_relogio_teste[21]         : D20       : output : 2.5 V             :         : 6         : N              
+um_alarme_teste[26]          : D21       : output : 2.5 V             :         : 6         : N              
+um_alarme_teste[30]          : D22       : output : 2.5 V             :         : 6         : N              
+GND                          : E1        : gnd    :                   :         :           :                
+GND                          : E2        : gnd    :                   :         :           :                
+TDO                          : E3        : output :                   :         : 9         :                
+TCK                          : E4        : input  :                   :         : 9         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
+GND                          : E7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
+VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : E10       : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : E11       : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : E12       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : E13       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : E14       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : E15       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
+um_relogio[3]                : E17       : output : 2.5 V             :         : 7         : N              
+VCCD_PLL                     : E18       : power  :                   : 1.2V    :           :                
+GND                          : E19       : gnd    :                   :         :           :                
+us_relogio_teste[8]          : E20       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[28]         : E21       : output : 2.5 V             :         : 6         : N              
+ds_relogio[5]                : E22       : output : 2.5 V             :         : 6         : N              
+GXB_NC                       : F1        :        :                   :         : QL0       :                
+GXB_NC                       : F2        :        :                   :         : QL0       :                
+GND                          : F3        : gnd    :                   :         :           :                
+VCCA                         : F4        : power  :                   : 2.5V    :           :                
+TDI                          : F5        : input  :                   :         : 9         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F6        :        :                   :         : 8         :                
+VCCINT                       : F7        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
+GND                          : F9        : gnd    :                   :         :           :                
+VCCIO8                       : F10       : power  :                   : 2.5V    : 8         :                
+GND                          : F11       : gnd    :                   :         :           :                
+dm_alarme_teste[4]           : F12       : output : 2.5 V             :         : 7         : N              
+GND                          : F13       : gnd    :                   :         :           :                
+VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
+GND                          : F15       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :         : 6         :                
+VCCA                         : F19       : power  :                   : 2.5V    :           :                
+um_relogio_teste[16]         : F20       : output : 2.5 V             :         : 6         : N              
+GND                          : F21       : gnd    :                   :         :           :                
+us_relogio_teste[11]         : F22       : output : 2.5 V             :         : 6         : N              
+GND                          : G1        : gnd    :                   :         :           :                
+GND                          : G2        : gnd    :                   :         :           :                
+VCCD_PLL                     : G3        : power  :                   : 1.2V    :           :                
+VCCIO9                       : G4        : power  :                   : 2.5V    : 9         :                
+TMS                          : G5        : input  :                   :         : 9         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8         :                
+VCCINT                       : G9        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 8         :                
+dm_alarme_teste[12]          : G12       : output : 2.5 V             :         : 7         : N              
+VCCINT                       : G13       : power  :                   : 1.2V    :           :                
+us_relogio[3]                : G14       : output : 2.5 V             :         : 7         : N              
+um_relogio[4]                : G15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 6         :                
+um_alarme_teste[24]          : G20       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[7]          : G21       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[13]         : G22       : output : 2.5 V             :         : 6         : N              
+GXB_GND*                     : H1        :        :                   :         : QL0       :                
+GXB_GND*                     : H2        :        :                   :         : QL0       :                
+VCCH_GXB                     : H3        : power  :                   : 2.5V    :           :                
+nCONFIG                      : H4        :        :                   :         : 9         :                
+GND                          : H5        : gnd    :                   :         :           :                
+VCCINT                       : H6        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8         :                
+VCC_CLKIN8A                  : H10       : power  :                   : 2.5V    : 8A        :                
+GND                          : H11       : gnd    :                   :         :           :                
+uh_relogio[6]                : H12       : output : 2.5 V             :         : 7         : N              
+dm_alarme_teste[27]          : H13       : output : 2.5 V             :         : 7         : N              
+dh_relogio[5]                : H14       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 6         :                
+us_relogio_teste[24]         : H17       : output : 2.5 V             :         : 6         : N              
+GND                          : H18       : gnd    :                   :         :           :                
+VCCIO6                       : H19       : power  :                   : 2.5V    : 6         :                
+uh_relogio[2]                : H20       : output : 2.5 V             :         : 6         : N              
+us_relogio[2]                : H21       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[20]         : H22       : output : 2.5 V             :         : 6         : N              
+GND                          : J1        : gnd    :                   :         :           :                
+GND                          : J2        : gnd    :                   :         :           :                
+VCCA_GXB                     : J3        : power  :                   : 2.5V    :           :                
+~ALTERA_NCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : J4        : input  : 2.5 V             :         : 9         : N              
+VCCINT                       : J5        : power  :                   : 1.2V    :           :                
+GND                          : J6        : gnd    :                   :         :           :                
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+GND                          : J8        : gnd    :                   :         :           :                
+VCCINT                       : J9        : power  :                   : 1.2V    :           :                
+GXB_GND*                     : J10       :        :                   :         : 8A        :                
+VCCINT                       : J11       : power  :                   : 1.2V    :           :                
+dh_relogio[0]                : J12       : output : 2.5 V             :         : 7         : N              
+dm_alarme_teste[28]          : J13       : output : 2.5 V             :         : 7         : N              
+um_relogio[0]                : J14       : output : 2.5 V             :         : 7         : N              
+us_relogio_teste[2]          : J15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 6         :                
+VCCINT                       : J17       : power  :                   : 1.2V    :           :                
+VCCIO6                       : J18       : power  :                   : 2.5V    : 6         :                
+um_relogio_teste[5]          : J19       : output : 2.5 V             :         : 6         : N              
+um_alarme_teste[14]          : J20       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[17]         : J21       : output : 2.5 V             :         : 6         : N              
+um_relogio_teste[8]          : J22       : output : 2.5 V             :         : 6         : N              
+GXB_NC                       : K1        :        :                   :         : QL0       :                
+GXB_NC                       : K2        :        :                   :         : QL0       :                
+VCCL_GXB                     : K3        : power  :                   : 1.2V    :           :                
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : K4        : input  : 2.5 V             :         : 9         : N              
+GND                          : K5        : gnd    :                   :         :           :                
+VCCINT                       : K6        : power  :                   : 1.2V    :           :                
+GND                          : K7        : gnd    :                   :         :           :                
+VCCINT                       : K8        : power  :                   : 1.2V    :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+GXB_GND*                     : K10       :        :                   :         : 8A        :                
+GND                          : K11       : gnd    :                   :         :           :                
+dm_alarme_teste[26]          : K12       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K13       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K14       :        :                   :         : 6         :                
+GND                          : K15       : gnd    :                   :         :           :                
+VCCINT                       : K16       : power  :                   : 1.2V    :           :                
+um_alarme_teste[7]           : K17       : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : K18       : power  :                   : 2.5V    : 6         :                
+dm_alarme_teste[18]          : K19       : output : 2.5 V             :         : 6         : N              
+um_relogio[2]                : K20       : output : 2.5 V             :         : 6         : N              
+GND                          : K21       : gnd    :                   :         :           :                
+um_alarme_teste[15]          : K22       : output : 2.5 V             :         : 6         : N              
+GND                          : L1        : gnd    :                   :         :           :                
+GND                          : L2        : gnd    :                   :         :           :                
+VCCL_GXB                     : L3        : power  :                   : 1.2V    :           :                
+VCCA                         : L4        : power  :                   : 2.5V    :           :                
+VCCINT                       : L5        : power  :                   : 1.2V    :           :                
+GND                          : L6        : gnd    :                   :         :           :                
+VCCINT                       : L7        : power  :                   : 1.2V    :           :                
+GND                          : L8        : gnd    :                   :         :           :                
+VCCINT                       : L9        : power  :                   : 1.2V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+VCCINT                       : L11       : power  :                   : 1.2V    :           :                
+GND                          : L12       : gnd    :                   :         :           :                
+dm_alarme_teste[14]          : L13       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[31]         : L14       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[9]          : L15       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[14]         : L16       : output : 2.5 V             :         : 5         : N              
+VCCINT                       : L17       : power  :                   : 1.2V    :           :                
+GND                          : L18       : gnd    :                   :         :           :                
+us_relogio_teste[1]          : L19       : output : 2.5 V             :         : 6         : N              
+us_relogio_teste[0]          : L20       : output : 2.5 V             :         : 6         : N              
+GND+                         : L21       :        :                   :         : 6         :                
+GND+                         : L22       :        :                   :         : 6         :                
+GXB_GND*                     : M1        :        :                   :         : QL0       :                
+GXB_GND*                     : M2        :        :                   :         : QL0       :                
+GND                          : M3        : gnd    :                   :         :           :                
+VCCD_PLL                     : M4        : power  :                   : 1.2V    :           :                
+GND                          : M5        : gnd    :                   :         :           :                
+VCCINT                       : M6        : power  :                   : 1.2V    :           :                
+GXB_GND*                     : M7        :        :                   :         : 3B        :                
+GXB_GND*                     : M8        :        :                   :         : 3B        :                
+GND                          : M9        : gnd    :                   :         :           :                
+VCCINT                       : M10       : power  :                   : 1.2V    :           :                
+str_sto                      : M11       : input  : 2.5 V             :         : 3A        : N              
+VCCINT                       : M12       : power  :                   : 1.2V    :           :                
+us_relogio[6]                : M13       : output : 2.5 V             :         : 5         : N              
+dm_alarme_teste[8]           : M14       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[29]         : M15       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[25]         : M16       : output : 2.5 V             :         : 5         : N              
+dm_alarme_teste[25]          : M17       : output : 2.5 V             :         : 5         : N              
+um_relogio_teste[1]          : M18       : output : 2.5 V             :         : 5         : N              
+um_relogio_teste[2]          : M19       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[3]          : M20       : output : 2.5 V             :         : 5         : N              
+GND+                         : M21       :        :                   :         : 5         :                
+GND+                         : M22       :        :                   :         : 5         :                
+GND                          : N1        : gnd    :                   :         :           :                
+GND                          : N2        : gnd    :                   :         :           :                
+VCCL_GXB                     : N3        : power  :                   : 1.2V    :           :                
+GND                          : N4        : gnd    :                   :         :           :                
+VCCINT                       : N5        : power  :                   : 1.2V    :           :                
+GND                          : N6        : gnd    :                   :         :           :                
+GXB_GND*                     : N7        :        :                   :         : 3B        :                
+GXB_GND*                     : N8        :        :                   :         : 3B        :                
+VCCINT                       : N9        : power  :                   : 1.2V    :           :                
+GND                          : N10       : gnd    :                   :         :           :                
+clk                          : N11       : input  : 2.5 V             :         : 3A        : N              
+VCC_CLKIN3A                  : N12       : power  :                   : 2.5V    : 3A        :                
+um_alarme_teste[11]          : N13       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[18]         : N14       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
+VCCINT                       : N16       : power  :                   : 1.2V    :           :                
+dm_alarme_teste[3]           : N17       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : N18       : power  :                   : 2.5V    : 5         :                
+dm_alarme_teste[29]          : N19       : output : 2.5 V             :         : 5         : N              
+dm_relogio[3]                : N20       : output : 2.5 V             :         : 5         : N              
+dm_alarme_teste[13]          : N21       : output : 2.5 V             :         : 5         : N              
+dm_alarme_teste[31]          : N22       : output : 2.5 V             :         : 5         : N              
+GXB_NC                       : P1        :        :                   :         : QL0       :                
+GXB_NC                       : P2        :        :                   :         : QL0       :                
+VCCH_GXB                     : P3        : power  :                   : 2.5V    :           :                
+MSEL3                        : P4        :        :                   :         : 3         :                
+MSEL1                        : P5        :        :                   :         : 3         :                
+VCCINT                       : P6        : power  :                   : 1.2V    :           :                
+VCC_CLKIN3B                  : P7        : power  :                   : 2.5V    : 3B        :                
+VCCINT                       : P8        : power  :                   : 1.2V    :           :                
+GND                          : P9        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P10       :        :                   :         : 3         :                
+GND                          : P11       : gnd    :                   :         :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P13       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
+GND                          : P16       : gnd    :                   :         :           :                
+VCCINT                       : P17       : power  :                   : 1.2V    :           :                
+GND                          : P18       : gnd    :                   :         :           :                
+VCCIO5                       : P19       : power  :                   : 2.5V    : 5         :                
+dh_relogio[2]                : P20       : output : 2.5 V             :         : 5         : N              
+GND                          : P21       : gnd    :                   :         :           :                
+ds_relogio[1]                : P22       : output : 2.5 V             :         : 5         : N              
+GND                          : R1        : gnd    :                   :         :           :                
+GND                          : R2        : gnd    :                   :         :           :                
+VCCA_GXB                     : R3        : power  :                   : 2.5V    :           :                
+VCCD_PLL                     : R4        : power  :                   : 1.2V    :           :                
+MSEL2                        : R5        :        :                   :         : 3         :                
+GND                          : R6        : gnd    :                   :         :           :                
+VCCINT                       : R7        : power  :                   : 1.2V    :           :                
+nSTATUS                      : R8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 3         :                
+GND                          : R12       : gnd    :                   :         :           :                
+um_alarme_teste[2]           : R13       : output : 2.5 V             :         : 4         : N              
+dm_relogio[0]                : R14       : output : 2.5 V             :         : 4         : N              
+um_relogio_teste[7]          : R15       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R17       :        :                   :         : 5         :                
+VCCIO5                       : R18       : power  :                   : 2.5V    : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R19       :        :                   :         : 5         :                
+us_relogio_teste[6]          : R20       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5         :                
+us_relogio[1]                : R22       : output : 2.5 V             :         : 5         : N              
+GXB_GND*                     : T1        :        :                   :         : QL0       :                
+GXB_GND*                     : T2        :        :                   :         : QL0       :                
+VCCL_GXB                     : T3        : power  :                   : 1.2V    :           :                
+GND                          : T4        : gnd    :                   :         :           :                
+VCCA                         : T5        : power  :                   : 2.5V    :           :                
+MSEL0                        : T6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3         :                
+VCCINT                       : T10       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 3         :                
+VCCINT                       : T12       : power  :                   : 1.2V    :           :                
+um_alarme_teste[0]           : T13       : output : 2.5 V             :         : 4         : N              
+um_relogio[6]                : T14       : output : 2.5 V             :         : 4         : N              
+us_relogio_teste[16]         : T15       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5         :                
+ds_relogio[6]                : T19       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5         :                
+dm_relogio[4]                : T21       : output : 2.5 V             :         : 5         : N              
+us_relogio_teste[10]         : T22       : output : 2.5 V             :         : 5         : N              
+GND                          : U1        : gnd    :                   :         :           :                
+GND                          : U2        : gnd    :                   :         :           :                
+GND                          : U3        : gnd    :                   :         :           :                
+VCCD_PLL                     : U4        : power  :                   : 1.2V    :           :                
+CONF_DONE                    : U5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3         :                
+VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : U9        : power  :                   : 2.5V    : 3         :                
+GND                          : U10       : gnd    :                   :         :           :                
+VCCIO3                       : U11       : power  :                   : 2.5V    : 3         :                
+dm_alarme_teste[22]          : U12       : output : 2.5 V             :         : 3         : N              
+VCCIO4                       : U13       : power  :                   : 2.5V    : 4         :                
+dm_alarme_teste[19]          : U14       : output : 2.5 V             :         : 4         : N              
+us_relogio[0]                : U15       : output : 2.5 V             :         : 4         : N              
+VCCINT                       : U16       : power  :                   : 1.2V    :           :                
+GND                          : U17       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U18       :        :                   :         : 5         :                
+VCCA                         : U19       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 5         :                
+GND                          : U21       : gnd    :                   :         :           :                
+us_relogio_teste[19]         : U22       : output : 2.5 V             :         : 5         : N              
+GXB_NC                       : V1        :        :                   :         : QL0       :                
+GXB_NC                       : V2        :        :                   :         : QL0       :                
+VCCL_GXB                     : V3        : power  :                   : 1.2V    :           :                
+VCCA                         : V4        : power  :                   : 2.5V    :           :                
+GND                          : V5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 3         :                
+GND                          : V8        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 3         :                
+VCCIO3                       : V10       : power  :                   : 2.5V    : 3         :                
+GND                          : V11       : gnd    :                   :         :           :                
+VCCIO3                       : V12       : power  :                   : 2.5V    : 3         :                
+um_relogio_teste[31]         : V13       : output : 2.5 V             :         : 4         : N              
+GND                          : V14       : gnd    :                   :         :           :                
+VCCIO4                       : V15       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : V16       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : V17       : power  :                   : 2.5V    : 4         :                
+VCCD_PLL                     : V18       : power  :                   : 1.2V    :           :                
+GND                          : V19       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
+GND                          : W1        : gnd    :                   :         :           :                
+GND                          : W2        : gnd    :                   :         :           :                
+VCCA_GXB                     : W3        : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
+dm_alarme_teste[15]          : W7        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3         :                
+um_alarme_teste[20]          : W9        : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[8]           : W10       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[25]          : W11       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[3]           : W12       : output : 2.5 V             :         : 3         : N              
+uh_relogio[4]                : W13       : output : 2.5 V             :         : 4         : N              
+dm_alarme_teste[1]           : W14       : output : 2.5 V             :         : 4         : N              
+dm_alarme_teste[24]          : W15       : output : 2.5 V             :         : 4         : N              
+dh_relogio[6]                : W16       : output : 2.5 V             :         : 4         : N              
+dm_relogio[1]                : W17       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W18       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5         :                
+GXB_GND*                     : Y1        :        :                   :         : QL0       :                
+GXB_GND*                     : Y2        :        :                   :         : QL0       :                
+NC                           : Y3        :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 3         :                
+led_alarme_ativo             : Y8        : output : 2.5 V             :         : 3         : N              
+dm_alarme_teste[11]          : Y9        : output : 2.5 V             :         : 3         : N              
+um_relogio_teste[28]         : Y10       : output : 2.5 V             :         : 3         : N              
+led_aviso_alarme             : Y11       : output : 2.5 V             :         : 3         : N              
+um_alarme_teste[22]          : Y12       : output : 2.5 V             :         : 3         : N              
+um_relogio_teste[12]         : Y13       : output : 2.5 V             :         : 4         : N              
+dm_alarme_teste[2]           : Y14       : output : 2.5 V             :         : 4         : N              
+dh_relogio[3]                : Y15       : output : 2.5 V             :         : 4         : N              
+ds_relogio[2]                : Y16       : output : 2.5 V             :         : 4         : N              
+um_relogio[5]                : Y17       : output : 2.5 V             :         : 4         : N              
+um_relogio_teste[11]         : Y18       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y19       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y20       :        :                   :         : 4         :                
+GND                          : Y21       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                
